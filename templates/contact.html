@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us</title>
+    <style>
+       
+#sub{
+    margin: 10px 16px;
+border: 2px solid black;
+border-radius: 8px;
+height: 30px;
+width: 74px;
+color: #e5ece7;
+background: #0f0f0f;
+cursor: pointer;
+}
+body{
+    background-color: rgb(110, 235, 187);
+}
+#sub:hover{
+            color: red
+           
+        }
+.par{
+    padding: 1px 69px;
+}
+
+.name{
+    padding: 1px 50px;
+    margin: -12px 14px;
+}
+
+.con{
+    margin: 10px;
+padding: 7px;
+color: #0f0f0f;
+}
+.con1{
+    margin: 12px;
+padding: 10px 4px;
+color: black;
+width: 70vw;
+border-radius: 10px;
+}
+body{
+    min-height: 100vh;
+}
+.sticky-footer{
+    position: sticky;
+top: 100%;
+text-align: center;
+background-color: black;
+color: white;
+height: 68px;
+padding: 1px 7px;
+}
+        @media only screen and (max-width: 350px) {
+  body {
+    background-color: lightblue;
+  }
+  .name{
+width: 80vw;
+margin: 0px;
+    padding: 0px;
+}
+.par{
+    padding: 1px 16px;
+  }
+  .con1{
+width: 70 vw;
+  }
+  
+  }
+  #name1{
+            height: 30px;
+            width: 70vw;
+border-radius: 8px;
+        }
+  .navbar{
+            background-color: black;
+            border-radius: 3px;
+            
+        }
+        .navbar ul{
+            overflow: auto;
+            width: 100%;
+        }
+        .navbar li{
+            float:left;
+            list-style: none; 
+            margin: 13px 20px;
+            
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        /* .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        } */
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+       
+  
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <!-- <li><a href="#">Services</a></li> -->
+                <li><a href="#">Contact us</a></li>
+                <!-- <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search this website">
+                </div> -->
+            </ul>
+        </nav>
+    </header>
+    <div class="par">
+        <h1>Contact us!</h1>
+    </div>
+    <div class="name">
+  
+        <form method="post" action="/homepage">
+            {% csrf_token %}
+           <label class="con" for="fname">Your name:</label><br>
+            <input  class ="con1" type="text" id="name" name="name"  placeholder="Your name"><br><br>
+          
+             <!-- <label class="con" for="lname">Your Email:</label><br>
+            <input class ="con1"  type="text" id="lname" name="lname" placeholder="Your Email"><br><br>  -->
+            <label class="con" for="lname">Your Mobile Number:</label><br>
+            <input class ="con1" type="text" id="phone" name="phone" placeholder="Your Mobile Number"><br><br> 
+            <label class="con" for="fname">What you want to contact me here</label><br>
+            <!-- <input class ="con1" type="text" id="fname1" name="fname1" placeholder="Enter the text"><br> -->
+            <textarea name="desc" id="desc" cols="30" rows="15" placeholder="Enter the text"class="con"></textarea><br>
+            <input  type="submit" value="Submit" id="sub">
+
+          </form>
+    </div>
+    <div class=" sticky-footer">
+        <p>Hotel BT @2021.All Rights Reserved.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+#cv-templets {
+    display: none;
+}
+
+.myimg {
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.background {
+    background-color: cadetblue;
+}
